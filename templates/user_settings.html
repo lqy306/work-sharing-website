@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户设置</title>
+</head>
+<body>
+    <h1>用户设置</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <h2>设置昵称</h2>
+    <form method="post">
+        <input type="hidden" name="action" value="set_nickname">
+        <label for="nickname">昵称:</label>
+        <input type="text" id="nickname" name="nickname"><br>
+        <input type="submit" value="设置">
+    </form>
+    <h2>更改密码</h2>
+    <form method="post">
+        <input type="hidden" name="action" value="change_password">
+        <label for="old_password">旧密码:</label>
+        <input type="password" id="old_password" name="old_password" required><br>
+        <label for="new_password">新密码:</label>
+        <input type="password" id="new_password" name="new_password" required><br>
+        <input type="submit" value="更改">
+    </form>
+    <h2>注销账号</h2>
+    <form method="post">
+        <input type="hidden" name="action" value="delete_account">
+        <input type="submit" value="注销">
+    </form>
+</body>
+</html>    

@@ -1,0 +1,294 @@
+/* 全局样式 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-bg-1);
+}
+
+/* 尖角UI风格 */
+.sharp-ui {
+  --border-radius-small: 2px;
+  --border-radius-medium: 4px;
+  --border-radius-large: 6px;
+}
+
+.sharp-ui .arco-btn,
+.sharp-ui .arco-input,
+.sharp-ui .arco-select,
+.sharp-ui .arco-textarea,
+.sharp-ui .arco-card,
+.sharp-ui .arco-modal,
+.sharp-ui .arco-dropdown,
+.sharp-ui .arco-menu,
+.sharp-ui .arco-table,
+.sharp-ui .arco-form,
+.sharp-ui .arco-tag,
+.sharp-ui .arco-popover,
+.sharp-ui .arco-tooltip,
+.sharp-ui .arco-notification,
+.sharp-ui .arco-message,
+.sharp-ui .arco-upload {
+  border-radius: var(--border-radius-medium);
+}
+
+.sharp-ui .arco-btn-sm,
+.sharp-ui .arco-input-size-small,
+.sharp-ui .arco-select-size-small,
+.sharp-ui .arco-tag-size-small {
+  border-radius: var(--border-radius-small);
+}
+
+.sharp-ui .arco-btn-lg,
+.sharp-ui .arco-input-size-large,
+.sharp-ui .arco-select-size-large,
+.sharp-ui .arco-tag-size-large {
+  border-radius: var(--border-radius-large);
+}
+
+/* 响应式布局 */
+@media screen and (max-width: 768px) {
+  .responsive-hide-mobile {
+    display: none !important;
+  }
+  
+  .responsive-full-width-mobile {
+    width: 100% !important;
+  }
+  
+  .responsive-padding-mobile {
+    padding: 12px !important;
+  }
+  
+  .responsive-margin-mobile {
+    margin: 12px !important;
+  }
+  
+  .responsive-text-center-mobile {
+    text-align: center !important;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .responsive-hide-tablet {
+    display: none !important;
+  }
+  
+  .responsive-full-width-tablet {
+    width: 100% !important;
+  }
+}
+
+/* 自定义主题色 */
+:root {
+  --primary-color: #165DFF;
+  --primary-hover-color: #4080FF;
+  --primary-active-color: #0E42D2;
+  --success-color: #00B42A;
+  --warning-color: #FF7D00;
+  --danger-color: #F53F3F;
+  --link-color: #165DFF;
+  --link-hover-color: #4080FF;
+}
+
+/* 自定义布局样式 */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.content-card {
+  background-color: #fff;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius-medium);
+}
+
+/* 动画效果 */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* 页脚样式 */
+.footer {
+  text-align: center;
+  padding: 24px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+}
+
+/* 登录和注册页面样式 */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.auth-card {
+  width: 400px;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius-medium);
+}
+
+.auth-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* 作品卡片样式 */
+.work-card {
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.work-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.work-card-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.work-card-description {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* 归档树样式 */
+.archive-tree {
+  padding: 16px;
+  background-color: #f5f5f5;
+  border-radius: var(--border-radius-medium);
+}
+
+.archive-tree .arco-tree-node-selected {
+  background-color: rgba(22, 93, 255, 0.1);
+}
+
+/* 上传区域样式 */
+.upload-area {
+  border: 2px dashed #d9d9d9;
+  border-radius: var(--border-radius-medium);
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.upload-area:hover {
+  border-color: var(--primary-color);
+}
+
+.upload-icon {
+  font-size: 48px;
+  color: #d9d9d9;
+  margin-bottom: 8px;
+}
+
+.upload-text {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+/* 分享链接样式 */
+.share-link-container {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background-color: #f5f5f5;
+  border-radius: var(--border-radius-medium);
+  margin-bottom: 16px;
+}
+
+.share-link-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 16px;
+}
+
+/* 密码保护标记样式 */
+.password-protected-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: var(--border-radius-small);
+  font-size: 12px;
+}
+
+/* 空状态样式 */
+.empty-state {
+  text-align: center;
+  padding: 40px 0;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.empty-text {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+/* 加载状态样式 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
